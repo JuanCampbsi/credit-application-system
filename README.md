@@ -51,13 +51,9 @@ $ ./gradlew bootrun
 
 ```
 
-👨‍💻 **Author** 💻
+👨‍💻 **Author -  Software Developer ** 💻
 
-<a href="https://www.linkedin.com/in/juancampos-ferreira/">
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/45372981?u=673edd9cf26a035d52e93d2e44dc3eff5315353f&v=4" width="100px;" alt=""/>
-<div style="display: flex;  margin-top: -75px; margin-left: 120px">
 
 [![Linkedin Badge](https://img.shields.io/badge/-Juan_Campos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/juancampos-ferreira/)](https://www.linkedin.com/in/juancampos-ferreira/) 
 
-<div style="margin-top: 15px; margin-left: 10px; font-style: italic"> Software Developer </div>
-</div>
+
