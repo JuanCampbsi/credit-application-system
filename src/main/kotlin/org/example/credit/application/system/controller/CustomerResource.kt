@@ -1,45 +1,52 @@
 package org.example.credit.application.system.controller
 
 import jakarta.validation.Valid
-import org.example.credit.application.system.dto.request.CreditDto
-import org.example.credit.application.system.dto.response.CreditView
-import org.example.credit.application.system.dto.response.CreditViewList
-import org.example.credit.application.system.entity.Credit
-import org.example.credit.application.system.service.impl.CreditService
+import org.example.credit.application.system.dto.request.CustomerDto
+import org.example.credit.application.system.dto.request.CustomerUpdateDto
+import org.example.credit.application.system.dto.response.CustomerView
+import org.example.credit.application.system.entity.Customer
+import org.example.credit.application.system.service.impl.CustomerService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import java.util.*
-import java.util.stream.Collectors
+
 
 @RestController
-@RequestMapping("/api/credits")
+@RequestMapping("/api/customers")
 class CustomerResource(
-    private val creditService: CreditService
+    private val customerService: CustomerService
 ) {
+
     @PostMapping
-    fun saveCredit(@RequestBody @Valid creditDto: CreditDto): ResponseEntity<String> {
-        val credit: Credit = this.creditService.save(creditDto.toEntity())
-        return ResponseEntity.status(HttpStatus.CREATED)
-            .body("Credit ${credit.creditCode} - Customer ${credit.customer?.email} saved!")
+    fun saveCustomer(@RequestBody @Valid customerDto: CustomerDto): ResponseEntity<CustomerView> {
+        val savedCustomer: Customer = this.customerService.save(customerDto.toEntity())
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(CustomerView(savedCustomer))
     }
 
-    @GetMapping
-    fun findAllByCustomerId(@RequestParam(value = "customerId") customerId: Long):
-            ResponseEntity<List<CreditViewList>> {
-        val creditViewList: List<CreditViewList> = this.creditService.findAllByCustomer(customerId)
-            .stream()
-            .map { credit: Credit -> CreditViewList(credit) }
-            .collect(Collectors.toList())
-        return ResponseEntity.status(HttpStatus.OK).body(creditViewList)
+    @GetMapping("/{id}")
+    fun findById(@PathVariable id: Long): ResponseEntity<CustomerView> {
+        val customer: Customer = this.customerService.findById(id)
+
+        return ResponseEntity.status(HttpStatus.OK).body(CustomerView(customer))
     }
 
-    @GetMapping("/{creditCode}")
-    fun findByCreditCode(
-        @RequestParam(value = "customerId") customerId: Long,
-        @PathVariable creditCode: UUID
-    ): ResponseEntity<CreditView> {
-        val credit: Credit = this.creditService.findByCreditCode(customerId, creditCode)
-        return ResponseEntity.status(HttpStatus.OK).body(CreditView(credit))
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteCustomer(@PathVariable id: Long): ResponseEntity<String>  {
+        this.customerService.delete(id)
+        return ResponseEntity.status(HttpStatus.OK).body("Customer deleted with successfully!")
+    }
+
+    @PatchMapping
+    fun updateCustomer(
+        @RequestParam(value = "customerId") id: Long,
+        @RequestBody @Valid customerUpdateDto: CustomerUpdateDto
+    ): ResponseEntity<CustomerView> {
+        val customer: Customer = this.customerService.findById(id)
+        val customerToUpdate: Customer = customerUpdateDto.toEntity(customer)
+        val customerUpdated: Customer = this.customerService.save(customerToUpdate)
+
+        return ResponseEntity.status(HttpStatus.OK).body(CustomerView(customerUpdated))
     }
 }
