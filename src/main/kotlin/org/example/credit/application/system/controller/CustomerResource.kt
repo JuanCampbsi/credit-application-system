@@ -33,10 +33,7 @@ class CustomerResource(
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    fun deleteCustomer(@PathVariable id: Long): ResponseEntity<String>  {
-        this.customerService.delete(id)
-        return ResponseEntity.status(HttpStatus.OK).body("Customer deleted with successfully!")
-    }
+    fun deleteCustomer(@PathVariable id: Long) = this.customerService.delete(id)
 
     @PatchMapping
     fun updateCustomer(
