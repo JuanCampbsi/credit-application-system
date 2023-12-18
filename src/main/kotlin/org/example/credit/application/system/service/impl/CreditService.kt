@@ -5,6 +5,7 @@ import org.example.credit.application.system.exception.BusinessException
 import org.example.credit.application.system.repository.CreditRepository
 import org.example.credit.application.system.service.ICreditService
 import org.springframework.stereotype.Service
+import java.time.LocalDate
 import java.util.*
 
 @Service
@@ -26,5 +27,10 @@ class CreditService(
        val credit: Credit = (this.creditRepository.findByCreditCode(creditCode)
             ?: throw BusinessException("Creditcode $creditCode not found"))
         return if(credit.customer?.id == customerId) credit else throw IllegalArgumentException("Contact admin")
+    }
+    
+    private fun validDayFirstInstallment(dayFirstInstallment: LocalDate): Boolean {
+        return if (dayFirstInstallment.isBefore(LocalDate.now().plusMonths(3))) true
+        else throw BusinessException("Invalid Date")
     }
 }
