@@ -39,10 +39,13 @@ Testes de Integração: Com o SpringBootTest, foi realizado testes de integraç�
 juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces e na integração de diferentes partes do código.
 <figure>
 <p align="center">
-  <kbd>
  <img src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" height="350" width="450" alt="API"/>
-  </kbd>   
+</p>
+</figure>
+
 <br><br>
+<figure>
+<p align="center">
   <img src="https://i.imgur.com/7phya16.png" height="473" width="172" alt="API para Sistema de Avaliação de Créditos"/><br>
   Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
