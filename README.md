@@ -29,8 +29,18 @@ A combinação do Spring Boot com Kotlin oferece um ambiente de desenvolvimento 
     </a>
 </p>
 
+## Testes Unitários e de Integração
+Neste projeto, foi implementado testes unitários e de integração para garantir a qualidade e a confiabilidade do código:
+
+Testes Unitários: Foi utilizado JUnit para implementar testes unitários, focando em validar cada função e método de maneira isolada. Esses testes ajudam a garantir que a lógica de negócio individual de cada componente funcione 
+conforme esperado.
+
+Testes de Integração: Com o SpringBootTest, foi realizado testes de integração para verificar a interação entre diferentes módulos do aplicativo. Esses testes são cruciais para assegurar que os componentes do sistema funcionem 
+juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces e na integração de diferentes partes do código.
 <figure>
 <p align="center">
+ <img src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
+    <br><br>
   <img src="https://i.imgur.com/7phya16.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
   Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
