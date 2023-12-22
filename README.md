@@ -41,7 +41,7 @@ juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces
 
 <p align="center">
   <kbd>
- <img width="800" style="border-radius: 10px" height="350" src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" alt="Intro"> 
+ <img width="800" style="border-radius: 10px" height="300" src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" alt="Intro"> 
   </kbd>
   </br>
 </p>
