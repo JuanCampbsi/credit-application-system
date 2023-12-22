@@ -3,9 +3,6 @@ package org.example.credit.application.system.controller
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.example.credit.application.system.dto.request.CreditDto
 import org.example.credit.application.system.dto.request.CustomerDto
-import org.example.credit.application.system.dto.request.CustomerUpdateDto
-import org.example.credit.application.system.entity.Address
-import org.example.credit.application.system.entity.Credit
 import org.example.credit.application.system.entity.Customer
 import org.example.credit.application.system.repository.CreditRepository
 import org.example.credit.application.system.repository.CustomerRepository
@@ -25,7 +22,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 import java.math.BigDecimal
 import java.time.LocalDate
-import java.util.*
 
 @SpringBootTest
 @ActiveProfiles("test")
