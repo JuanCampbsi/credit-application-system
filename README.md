@@ -49,7 +49,7 @@ juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces
 <br><br>
 <figure>
 <p align="center">
-  <img src="https://i.imgur.com/7phya16.png" height="250" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
+  <img src="https://i.imgur.com/7phya16.png" height="250" width="370" alt="API para Sistema de Avaliação de Créditos"/><br>
   Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
 </figure>
