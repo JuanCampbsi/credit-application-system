@@ -37,16 +37,19 @@ conforme esperado.
 
 Testes de Integração: Com o SpringBootTest, foi realizado testes de integração para verificar a interação entre diferentes módulos do aplicativo. Esses testes são cruciais para assegurar que os componentes do sistema funcionem 
 juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces e na integração de diferentes partes do código.
-<figure>
+
+
 <p align="center">
- <img src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" height="350" width="450" alt="API"/>
+  <kbd>
+ <img width="800" style="border-radius: 10px" height="400" src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" alt="Intro"> 
+  </kbd>
+  </br>
 </p>
-</figure>
 
 <br><br>
 <figure>
 <p align="center">
-  <img src="https://i.imgur.com/7phya16.png" height="473" width="172" alt="API para Sistema de Avaliação de Créditos"/><br>
+  <img src="https://i.imgur.com/7phya16.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
   Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
 </figure>
