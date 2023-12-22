@@ -5,6 +5,7 @@ import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import org.assertj.core.api.Assertions
+import org.example.credit.application.system.entity.Address
 import org.example.credit.application.system.entity.Credit
 import org.example.credit.application.system.entity.Customer
 import org.example.credit.application.system.exception.BusinessException
@@ -59,20 +60,20 @@ class CreditServiceTest {
         Assertions.assertThat(actual).isSameAs(credit)
     }
 
-//    @Test
-//    fun `should not create credit when invalid day first installment`() {
-//        //given
-//        val invalidDayFirstInstallment: LocalDate = LocalDate.now().plusMonths(5)
-//        val credit: Credit = buildCredit(dayFirstInstallment = invalidDayFirstInstallment)
-//
-//        every { creditRepository.save(credit) } answers { credit }
-//        //when
-//        Assertions.assertThatThrownBy { creditService.save(credit) }
-//            .isInstanceOf(BusinessException::class.java)
-//            .hasMessage("Invalid Date")
-//        //then
-//        verify(exactly = 0) { creditRepository.save(any()) }
-//    }
+    @Test
+    fun `should not create credit when invalid day first installment`() {
+        //given
+        val invalidDayFirstInstallment: LocalDate = LocalDate.now().plusMonths(5)
+        val credit: Credit = buildCredit(dayFirstInstallment = invalidDayFirstInstallment)
+
+        every { creditRepository.save(credit) } answers { credit }
+        //when
+        Assertions.assertThatThrownBy { creditService.save(credit) }
+            .isInstanceOf(BusinessException::class.java)
+            .hasMessage("Invalid Date")
+        //then
+        verify(exactly = 0) { creditRepository.save(any()) }
+    }
 
     @Test
     fun `should return list of credits for a customer`() {
