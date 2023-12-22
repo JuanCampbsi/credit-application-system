@@ -41,7 +41,7 @@ juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces
 <p align="center">
  <img src="https://github.com/JuanCampbsi/Preview_README/blob/76452820febcd75f9118cc7491f7f613ac792559/assets/kt_test.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
     <br><br>
-  <img src="https://i.imgur.com/7phya16.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
+  <img src="https://i.imgur.com/7phya16.png" height="450" width="auto" alt="API para Sistema de Avaliação de Créditos"/><br>
   Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
 </figure>
