@@ -29,8 +29,8 @@ juntos harmoniosamente, identificando problemas que podem ocorrer nas interfaces
 <br><br>
 <figure>
 <p align="center">
+    Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito 
   <img src="https://i.imgur.com/7phya16.png" height="350" width="450" alt="API para Sistema de Avaliação de Créditos"/><br>
-  Diagrama UML Simplificado de uma API para Sistema de Avaliação de Crédito
 </p>
 </figure>
 
